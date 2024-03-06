@@ -12,9 +12,6 @@
 
     <name>model</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -31,7 +28,6 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <scope>provided</scope>
         </dependency>
         <!--easyexcel-->
         <dependency>

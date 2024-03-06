@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-user</module>
+        <module>service-hosp</module>
     </modules>
     <artifactId>service</artifactId>
 
@@ -31,6 +32,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.shangyitong</groupId>
+            <artifactId>service-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--开发者工具-->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
@@ -38,20 +44,32 @@
         <!--            <optional>true</optional>-->
         <!--        </dependency>-->
         <!-- 服务注册 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- 服务调用feign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; 服务调用feign &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--        </dependency>-->
         <!-- 流量控制 -->
         <!-- <dependency>
              <groupId>com.alibaba.cloud</groupId>
              <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
          </dependency>-->
+
+        <dependency>
+            <groupId>com.shangyitong</groupId>
+            <artifactId>model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shangyitong</groupId>
+            <artifactId>common-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

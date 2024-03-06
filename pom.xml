@@ -2,30 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <groupId>com.shangyitong</groupId>
     <artifactId>yygh_parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>yygh</name>
-    <description>yygh</description>
+    <name>yygh_parent</name>
+    <description>父工程</description>
     <modules>
         <module>common</module>
-        <module>common/service-util</module>
         <module>model</module>
         <module>service</module>
     </modules>
 
     <properties>
+        <spring-boot.version>3.1.5</spring-boot.version>
         <java.version>17</java.version>
         <cloud.version>2023.0.0</cloud.version>
         <alibaba.version>2021.0.4.0</alibaba.version>
-        <mybatis-plus.version>3.5.4</mybatis-plus.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <mysql.version>8.0.33</mysql.version>
         <swagger.version>3.0.0</swagger.version>
         <hutool.version>5.8.22</hutool.version>
@@ -42,7 +36,15 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -83,12 +85,6 @@
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <!--swagger ui-->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
 
